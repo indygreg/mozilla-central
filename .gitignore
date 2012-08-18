@@ -46,3 +46,7 @@ parser/html/java/javaparser/
 .project
 .cproject
 .settings/
+
+python/psutil/*.so
+python/psutil/*.dll
+python/psutil/build/

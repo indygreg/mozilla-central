@@ -46,3 +46,8 @@ _OPT\.OBJ/
 \.project$
 \.cproject$
 \.settings/
+
+# Python stuff installed at build-time
+^python/psutil/.*\.so
+^python/psutil/.*\.o
+^python/psutil/.*\.dll

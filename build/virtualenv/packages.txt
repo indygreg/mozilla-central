@@ -9,5 +9,6 @@ mozrunner.pth:testing/mozbase/mozrunner
 blessings.pth:python/blessings
 mozbuild.pth:python/mozbuild-bs
 mach.pth:python/mach
+setup.py:python/psutil:develop
 mozilla.pth:build
 mozilla.pth:config
