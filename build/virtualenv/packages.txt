@@ -10,3 +10,4 @@ blessings.pth:python/blessings
 mozbuild.pth:python/mozbuild
 mozilla.pth:build
 mozilla.pth:config
+copy:build/mozconfig.py
