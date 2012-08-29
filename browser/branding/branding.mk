@@ -13,7 +13,6 @@ ifndef srcdir
 $(error Must define srcdir before including this file)
 endif
 
-DIRS := content locales
 PREF_JS_EXPORTS := $(srcdir)/pref/firefox-branding.js
 
 # These are the lists of branding files per platform. These are shared
