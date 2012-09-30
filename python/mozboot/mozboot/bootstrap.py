@@ -1,6 +1,6 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this file,
-# You can obtain one at http://mozilla.org/MPL/2.0/.
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 # If we add unicode_literals, Python 2.6.1 (required for OS X 10.6) breaks.
 from __future__ import print_function
@@ -14,6 +14,7 @@ from mozboot.mint import MintBootstrapper
 from mozboot.osx import OSXBootstrapper
 from mozboot.openbsd import OpenBSDBootstrapper
 from mozboot.ubuntu import UbuntuBootstrapper
+from mozboot.windows import WindowsBootstrapper
 
 
 FINISHED = '''
@@ -65,6 +66,9 @@ class Bootstrapper(object):
         elif sys.platform.startswith('openbsd'):
             cls = OpenBSDBootstrapper
             args['version'] = platform.uname()[2]
+	    
+	elif sys.platform == 'win32':
+            cls = WindowsBootstrapper
 
         if cls is None:
             raise NotImplementedError('Bootstrap support is not yet available '
